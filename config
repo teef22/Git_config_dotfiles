@@ -1,0 +1,38 @@
+[alias]
+	log-full = log --all --date-order --date=format:'y%y.%b.%d | %H:%M' --full-history --graph --reflog --pretty=format:'%C(brightmagenta)%h%C(reset) %C(auto)%d%C(reset) %s %C(dim white)(%ad | %C(nodim cyan)%aN%C(dim white))%C(reset)'
+	log-full-dr = log --all --date-order --date=format:'y%y.%b.%d | %H:%M' --full-history --graph --reflog --pretty=format:'%C(brightmagenta)%h%C(reset) %C(auto)%d%C(reset) %s %C(dim white)(%ar | %C(nodim cyan)%aN%C(dim white))%C(reset)'
+	fsck-full = fsck --dangling --full --name-objects --no-reflogs --progress --unreachable
+	show-full = show
+[credential "https://gist.github.com"]
+	helper = 
+	helper = !/usr/bin/gh auth git-credential
+[credential "https://github.com"]
+	helper = 
+	helper = !/usr/bin/gh auth git-credential
+[color]
+	ui = auto
+[core]
+	editor = nvim
+	autocrlf = input
+	whitespace = trailing-space,space-before-tab
+[diff]
+	algorithm = histogram
+	colorMoved = zebra
+	compactionHeuristic = true
+	mnemonicPrefix = true
+	renames = true
+	renamelimit = 9999
+	tool = nvimdiff
+[difftool]
+	prompt = true
+[difftool "nvimdiff"]
+	cmd = "nvim -d \"$LOCAL\" \"$REMOTE\""
+[init]
+	defaultBranch = main
+[rerere]
+	enabled = true
+[user]
+	name = teef22
+	email = 
+[includeIf "gitdir:~/Documents/ChNU/"]
+	path = ~/.config/git/university.gitconfig
