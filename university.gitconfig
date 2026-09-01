@@ -1,7 +1,6 @@
 [user]
 	
 [include]
-
 	# name = ...
 	# email = ...
 	path = ~/.config/git/private_university.gitconfig
