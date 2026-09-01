@@ -33,6 +33,8 @@
 	enabled = true
 [user]
 	name = teef22
-	email = 
+[include]
+	# email = ...
+	path = ~/.config/git/private_config.gitconfig
 [includeIf "gitdir:~/Documents/ChNU/"]
 	path = ~/.config/git/university.gitconfig

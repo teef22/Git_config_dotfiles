@@ -1,4 +1,7 @@
 [user]
-	name = NAME_REDACTED
-	email = 
+	
+[include]
 
+	# name = ...
+	# email = ...
+	path = ~/.config/git/private_university.gitconfig
